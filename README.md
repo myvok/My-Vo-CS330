@@ -44,6 +44,8 @@ JavaScript supports two types of comments:
    - Multi-line comments: Enclosed between /* and */
   
 Hello World Program
+
 Here's a simple "Hello World" program in JavaScript:
+
 console.log("Hello, World!");
 
