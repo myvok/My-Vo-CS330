@@ -53,13 +53,16 @@ JavaScript Naming Conventions and Data Types
 
 JavaScript Naming Conventions and Data Types
   Naming Conventions:
+  
     - Case Sensitivity: JavaScript variable names are case-sensitive.
     - Starting Characters: Variables must begin with a letter, underscore (_), or dollar sign ($). They cannot start with a number or special characters like & or #.
     - Camel Case is commonly used in JavaScript (lastName), though underscores (last_name) are also seen, especially in constants or certain coding styles.
     - Reserved Keywords: JavaScript has many reserved words like let, const, class, return, etc., which cannot be used as variable names.
 
   Variable Declarations:
+  
   JavaScript variables are declared using var, let, or const.
+  
     - let is block-scoped and can be reassigned.
     - const is also block-scoped but must be initialized upon declaration and cannot be reassigned.
     - var is function-scoped and has more relaxed rules than let or const.
@@ -71,32 +74,34 @@ JavaScript has numerous reserved keywords, such as if, else, for, while, const, 
 2. Naming Requirements:
 Variable names must follow these rules:
 
-Must start with a letter, underscore (_), or dollar sign ($).
-Cannot start with a number.
-JavaScript is case-sensitive (myVar and myvar are different).
-3. Naming Conventions:
+   - Must start with a letter, underscore (_), or dollar sign ($).
+   - Cannot start with a number.
+   - JavaScript is case-sensitive (myVar and myvar are different).
+     
+4. Naming Conventions:
 Camel case (lastName) is the most widely used naming convention in JavaScript, though underscores are sometimes used in constants or certain codebases. These conventions are community standards and not enforced by the compiler.
 
-4. Typing:
-JavaScript is a dynamically typed and weakly typed language. Variables are not explicitly tied to types when declared, and types can change dynamically. For example:
+5. Typing:
+JavaScript is a dynamically typed and weakly typed language. Variables are not explicitly tied to types when declared, and types can change dynamically.
+For example:
 let x = 5;
 x = "Hello";  // Allowed, no errors
 
-5. Mutability:
+7. Mutability:
 JavaScript supports both mutable and immutable variables. Variables declared with let and var are mutable, while those declared with const are immutable, meaning their value cannot be reassigned.
 
-6. Operators:
+8. Operators:
 JavaScript supports arithmetic, comparison, and logical operators. Mixed-type operations are allowed with implicit conversions. For instance, "5" + 2 results in "52" due to string concatenation. Conversions can also be made explicitly using functions like parseInt(), parseFloat(), and Number().
 
-7. Mixed Type Operations:
+9. Mixed Type Operations:
 JavaScript allows mixed-type operations. If you add an int and a float, the result will be a float. For instance:
 let result = 10 + 5.5;  // Result is 15.5
 
-8. Type Binding:
+10. Type Binding:
 Variable binding in JavaScript happens at runtime. Variable types and addresses are assigned when the code is executed, not during compilation.
 
-9. Type Conversions:
+11. Type Conversions:
 JavaScript allows implicit type conversions (like Number("5") + 6 which results in 11) and explicit conversions using conversion functions like String(), Number(), parseInt(), and parseFloat().
 
-10. Complex Data Types:
+12. Complex Data Types:
 Objects and arrays are the most common complex data types in JavaScript. Objects allow key-value pairs, while arrays can store lists of elements.
