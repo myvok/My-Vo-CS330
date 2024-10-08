@@ -1,5 +1,5 @@
 # My-Vo-CS330
-JavaScript Programming Language Project
+## JavaScript Programming Language Project
 HISTORY
 
 1. Language Name: JavaScript
