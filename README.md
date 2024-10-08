@@ -106,7 +106,8 @@ JavaScript allows implicit type conversions (like Number("5") + 6 which results 
 12. Complex Data Types:
 Objects and arrays are the most common complex data types in JavaScript. Objects allow key-value pairs, while arrays can store lists of elements.
 
-Functions
+## Functions
+
 Syntax and Rules
 1. Function Declaration Syntax: Functions are declared using the function keyword followed by the function name, parameters in parentheses, and the function body in curly braces.
 
