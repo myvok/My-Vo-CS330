@@ -1,1 +1,35 @@
-Functions
+// FUNCTIONS
+// Function to multiply two numbers and return the result
+function multiply(a, b) {
+    return a * b;
+}
+
+// Recursive function to calculate factorial
+function factorial(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+// Function to split a string into two parts
+function splitString(str) {
+    const midpoint = Math.floor(str.length / 2);
+    const firstHalf = str.substring(0, midpoint);
+    const secondHalf = str.substring(midpoint);
+    return [firstHalf, secondHalf]; // Return both halves as an array
+}
+
+// Call the functions and save results
+const product = multiply(5, 3); // 15
+const fact = factorial(5); // 120
+const [firstPart, secondPart] = splitString("HelloWorld"); // "Hello", "World"
+
+// Function to test pass-by-value vs pass-by-reference
+function testPassBy(value) {
+    value += 1; // This will not affect the original variable
+    return value;
+}
+
+let num = 10;
+let result = testPassBy(num); // num remains 10, result is 11
