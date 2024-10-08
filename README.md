@@ -105,3 +105,43 @@ JavaScript allows implicit type conversions (like Number("5") + 6 which results 
 
 12. Complex Data Types:
 Objects and arrays are the most common complex data types in JavaScript. Objects allow key-value pairs, while arrays can store lists of elements.
+
+Functions
+Syntax and Rules
+1. Function Declaration Syntax: Functions are declared using the function keyword followed by the function name, parameters in parentheses, and the function body in curly braces.
+
+2. Placement in Code: Functions can be declared anywhere in the code, but they must be defined before they are called. JavaScript allows function declarations to be hoisted, so they can be called before their declaration in the code.
+
+3. Recursive Functions: JavaScript supports recursive functions. The example above illustrates a recursive factorial function.
+
+4. Multiple Parameters: Functions can accept multiple parameters of different data types. In JavaScript, parameters are not strictly typed, allowing flexibility.
+
+5. Returning Multiple Values: While JavaScript functions cannot return multiple values directly, they can return an array or an object containing multiple values. The splitString function returns an array of two strings.
+
+6. Pass-by-Value vs. Pass-by-Reference: JavaScript is primarily pass-by-value. When passing primitive types (like numbers, strings), a copy of the value is passed. For objects and arrays, a reference to the object is passed. The testPassBy function demonstrates this behavior.
+
+7. Storage of Arguments and Variables: During execution, function arguments and local variables are stored on the call stack. Primitive values are stored directly, while objects and arrays are referenced.
+
+8. Scoping Rules: JavaScript has function scope and block scope. Variables declared with var are function-scoped, while let and const are block-scoped. Variables are only accessible within the function or block they are declared in.
+
+9. Side Effects: Side effects are possible in JavaScript. They occur when a function modifies external variables or state. There are no built-in guardrails against side effects, so programmers need to be mindful of their code’s impact.
+
+10. Storage of Local Variable Values: Local variable values are stored on the stack.
+
+11. Other Important Aspects:
+    
+    - Dynamic Scope: JavaScript uses lexical scoping, meaning that the scope of a variable is determined by its location in the source code. There are no static scopes in JavaScript.
+    - Arrow Functions: JavaScript also supports arrow functions, providing a shorter syntax for function expressions.
+
+
+Additional Information:
+
+   - Keywords/Reserved Words: JavaScript has a substantial number of reserved keywords (e.g., function, return, if, else, for, while, let, const, etc.). There are over 60 reserved words.
+   - Limitations: JavaScript’s type system can lead to unexpected results with implicit type conversions, such as concatenating strings and numbers. Developers should be cautious when mixing data types in operations.
+   - Complex Data Types: Common complex data types include objects and arrays. Objects can store key-value pairs, and arrays can store lists of elements.
+
+Sources
+
+   - Books: "JavaScript: The Good Parts" by Douglas Crockford, "Eloquent JavaScript" by Marijn Haverbeke
+   - Websites: Mozilla Developer Network (MDN) JavaScript Reference
+
