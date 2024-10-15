@@ -1,0 +1,44 @@
+// Control Statements in JavaScript
+
+// One-condition if/else
+let x = true;
+if (x) {
+    console.log("x is true");
+} else {
+    console.log("x is false");
+}
+
+// Multi-condition if/else
+let y = 5;
+if (x && y > 0) {
+    console.log("x is true and y is positive");
+}
+
+// If/elif/else statements
+if (y > 10) {
+    console.log("y is greater than 10");
+} else if (y > 0) {
+    console.log("y is positive"); // This will execute
+} else {
+    console.log("y is not positive");
+}
+
+// Short-circuit logic
+let a = false;
+let b = true;
+if (a && (b = false)) {
+    console.log("This won't execute");
+}
+console.log(b); // Outputs: true
+
+// Switch-case statement
+let day = 2;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    default:
+        console.log("Another day");
