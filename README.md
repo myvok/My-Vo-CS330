@@ -146,3 +146,119 @@ Sources
    - Books: "JavaScript: The Good Parts" by Douglas Crockford, "Eloquent JavaScript" by Marijn Haverbeke
    - Websites: Mozilla Developer Network (MDN) JavaScript Reference
 
+## CONTROL STATEMENTS IN JAVASCRIPT
+1. Boolean Values in JavaScript
+In JavaScript, the boolean values are represented as true and false. Additionally, values like 1 and 0 can be interpreted as true and false, respectively, when converted to a boolean.
+
+2. Types of Conditional Statements in JavaScript
+JavaScript provides the following conditional statements:
+•	if/else: Executes a block of code if a specified condition is true and another block if false.
+•	if/else if/else: Allows for multiple conditions to be checked in sequence.
+•	ternary operator: A shorthand for the if/else statement (not explicitly mentioned in the assignment but worth noting).
+JavaScript does not have a direct equivalent to Perl's unless statement, but similar behavior can be achieved using if (!condition).
+
+3. Code Block Delimitation
+In JavaScript, code blocks under each condition in selection control statements are delimited by curly braces {}. If a code block contains only one statement, the braces are optional.
+
+4. Short-Circuit Evaluation
+JavaScript supports short-circuit evaluation using logical operators:
+
+•	For && (AND), if the first operand is false, the second operand is not evaluated.
+•	For || (OR), if the first operand is true, the second operand is not evaluated.
+
+Example of Short-Circuit Logic:
+let x = false;
+let y = true;
+
+if (x && (y = false)) {
+    console.log("This won't execute");
+}
+console.log(y); // Outputs: true, showing y was not evaluated.
+
+if (x || (y = false)) {
+    console.log("This will execute");
+}
+console.log(y); // Outputs: false, since y was evaluated here.
+
+5. Dangling Else Problem
+JavaScript resolves the "dangling else" problem using the closest preceding if. The else clause belongs to the nearest if statement, allowing clear interpretation.
+Example:
+let a = true;
+let b = false;
+
+if (a) {
+    if (b) {
+        console.log("Both true");
+    } else {
+        console.log("a is true, b is false"); // This will execute
+    }
+} else {
+    console.log("a is false");
+}
+
+6. Switch Statements
+JavaScript's switch statement requires the use of break to exit the case blocks. If break is omitted, the execution will continue to the next case (known as "fall-through"). The continue statement is not applicable within switch statements.
+
+let day = 2;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday"); // This will execute
+        // No break, so it will fall through
+    case 3:
+        console.log("Wednesday"); // This will also execute
+        break;
+    default:
+        console.log("Another day");
+}
+
+7. Loop Types in JavaScript
+JavaScript supports several types of loops:
+•	for loop: Iterates a specified number of times.
+•	while loop: Continues executing as long as a condition is true.
+•	do/while loop: Executes the block at least once and then checks the condition.
+•	forEach loop: Specific to arrays, it executes a function for each element.
+Example of Loop Types:
+
+// For loop
+for (let i = 0; i < 5; i++) {
+    console.log(i); // Outputs 0 to 4
+}
+
+// While loop
+let j = 0;
+while (j < 5) {
+    console.log(j); // Outputs 0 to 4
+    j++;
+}
+
+// Do/while loop
+let k = 0;
+do {
+    console.log(k); // Outputs 0
+    k++;
+} while (k < 1);
+
+// ForEach loop
+const arr = [1, 2, 3];
+arr.forEach(num => console.log(num)); // Outputs 1, 2, 3
+
+8. Loop Code Block Variables vs. Function Code Block Variables
+Variables declared inside loop blocks are limited to the scope of that block, particularly if declared with let or const. If declared with var, they are function-scoped.
+Example:
+
+for (let i = 0; i < 3; i++) {
+    var x = i; // Function scoped
+    let y = i; // Block scoped
+}
+console.log(x); // Outputs: 2
+console.log(y); // ReferenceError: y is not defined
+
+## Source:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+
+
