@@ -261,4 +261,63 @@ console.log(y); // ReferenceError: y is not defined
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 
+### Classes and Inheritance in JavaScript
+
+JavaScript is an object-oriented language and supports classes and inheritance. With the introduction of the class keyword in ES6, working with objects in JavaScript has become more similar to traditional OOP languages like Java and Python.
+
+# Code Implementation
+
+- Creating a Simple Object (Person):
+   class Person {
+    constructor(name, age) {
+        this.name = name;      // Instance variable
+        this.age = age;        // Instance variable
+    }
+    
+    // Method to display information about the person
+    getInfo() {
+        return `${this.name} is ${this.age} years old.`;
+    }
+}
+
+- Creating an Inherited Object (Student):
+   
+class Student extends Person {
+    constructor(name, age, studentID) {
+        super(name, age);      // Call the parent class constructor
+        this.studentID = studentID;
+    }
+    
+    // New method specific to Student
+    getStudentInfo() {
+        return `${this.name} (ID: ${this.studentID}) is ${this.age} years old.`;
+    }
+}
+
+1. Does JavaScript support objects?
+Yes, JavaScript fully supports objects and classes. JavaScript objects can be created as instances of classes or as standalone objects, and JavaScript also supports inheritance and polymorphism.
+
+2. Naming Conventions:
+
+   - Classes: Classes are typically named in PascalCase, where the first letter of each word is capitalized (e.g., Person, Student).
+   - Instance Variables: These are usually written in camelCase (e.g., name, studentID).
+   - Methods: Naming conventions for methods also follow camelCase, as in getInfo().
+  
+3. Standard Methods for Object Information:
+   
+   - toString(): JavaScript’s toString() method can be overridden to provide custom information about an object when it is printed or logged. However, JavaScript doesn’t require defining this in every class as it defaults to showing object information.
+   - Other Common Methods: JavaScript provides valueOf() and hasOwnProperty(), among others, that can be useful across various objects.
+     
+4. Inheritance in JavaScript:
+   
+   - Single Inheritance: JavaScript supports single inheritance through the extends keyword. A subclass can inherit from only one parent class.
+   - Constructor Invocation: The super() function is used to call the parent class’s constructor and methods from within the child class.
+     
+5. Handling Method Overloading:
+
+   - JavaScript doesn’t have built-in function overloading as in some languages (like Java). However, method overloading can be emulated by using default parameters, if statements to check parameter types or numbers, or rest parameters (...args).
+   - Method Resolution: In JavaScript, the most specific method (the one in the child class) is executed when a method with the same name exists in both the parent and child classes.
+  
+## Source:
+MDN Web Docs: JavaScript Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
