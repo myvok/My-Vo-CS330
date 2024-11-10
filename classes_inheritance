@@ -1,0 +1,48 @@
+// Defining a Person class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    getInfo() {
+        return `${this.name} is ${this.age} years old.`;
+    }
+}
+
+// Defining a Student class that inherits from Person
+class Student extends Person {
+    constructor(name, age, studentID) {
+        super(name, age);
+        this.studentID = studentID;
+    }
+    
+    getStudentInfo() {
+        return `${this.name} (ID: ${this.studentID}) is ${this.age} years old.`;
+    }
+}
+
+// Instantiate Person
+let person = new Person("Alice", 30);
+console.log(person.getInfo()); // "Alice is 30 years old."
+
+// Instantiate Student
+let student = new Student("Bob", 20, "S12345");
+console.log(student.getInfo()); // "Bob is 20 years old."
+console.log(student.getStudentInfo()); // "Bob (ID: S12345) is 20 years old."
+
+// Method Overriding
+class Animal {
+    sound() {
+        console.log("Generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    sound() {
+        console.log("Woof! Woof!");
+    }
+}
+
+let myDog = new Dog();
+myDog.sound(); // "Woof! Woof!"
